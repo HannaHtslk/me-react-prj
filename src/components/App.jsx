@@ -5,7 +5,7 @@ import './App.css'
 
 // src/App.jsx
 
-import Product from './Product'
+import Practice from './Product'
 
 export default function App() {
   return (
