@@ -3,7 +3,7 @@ const Booklist = ({books}) => {
     
     <ul>
         {books.map((book) => {
-           return <li>{ book.name}</li>
+           return <li key={book.id}> { book.name}</li>
         })
     }
     </ul>
@@ -11,3 +11,4 @@ const Booklist = ({books}) => {
 };
 
 export default Booklist;
+

@@ -1,10 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './components/App.jsx'
+import People from './components/people'
 import './index.css'
+import { famousPeople } from './components/Data'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <People people={famousPeople } />
   </React.StrictMode>,
 )
