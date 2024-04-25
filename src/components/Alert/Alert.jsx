@@ -1,3 +1,5 @@
+import clsx from 'clsx';
+
 import '../../styles/Alert.css';
 
 // const alertStyles = {
@@ -38,15 +40,30 @@ import '../../styles/Alert.css';
 //   return <p className={className.join(' ')}>{children}</p>;
 // };
 
+// export const Alert = ({ variant, children, outlined, elevated }) => {
+//   const className = ['alert', variant];
+
+//   if (outlined) {
+//     className.push('is-outlined');
+//   }
+
+//   if (elevated) {
+//     className.push('is-elevated');
+//   }
+//   return <p className={className.join(' ')}>{children}</p>;
+// };
+
 export const Alert = ({ variant, children, outlined, elevated }) => {
-  const className = ['alert', variant];
-
-  if (outlined) {
-    className.push('is-outlined');
-  }
-
-  if (elevated) {
-    className.push('is-elevated');
-  }
-  return <p className={className.join(' ')}>{children}</p>;
+  return (
+    <p
+      className={clsx(
+        'alert',
+        variant,
+        outlined && 'is-outlined',
+        elevated && 'is-elevated'
+      )}
+    >
+      {children}
+    </p>
+  );
 };

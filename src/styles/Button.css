@@ -1,0 +1,19 @@
+.button {
+  border: 1px solid grey;
+  background-color: transparent;
+  width: 100px;
+  height: 50px;
+  margin-right: 50px;
+}
+.primary {
+  border: 1px solid grey;
+  background-color: hotpink;
+  width: 100px;
+  height: 50px;
+}
+.secondary {
+  border: 1px solid grey;
+  background-color: rgb(13, 144, 144);
+  width: 100px;
+  height: 50px;
+}
