@@ -1,5 +1,6 @@
 [
-  { "id": "id-1", "name": "JS for beginners" },
-  { "id": "id-2", "name": "React basics" },
-  { "id": "id-3", "name": "React Router overview" }
+  { "id": 1, "name": "JS for beginners" },
+  { "id": 2, "name": "React basics" },
+  { "id": 3, "name": "React Router overview" },
+  { "id": 4, "name": "React Router overview" }
 ]
