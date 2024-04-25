@@ -5,16 +5,20 @@ import './App.css'
 
 // src/App.jsx
 
-import Practice from './Product'
+import Booklist from './Booklist'
+
+const favoriteBooks = [
+  { id: "id-1", name: "JS for beginners" },
+  { id: "id-2", name: "React basics" },
+  { id: "id-3", name: "React Router overview" }
+]
+
+
 
 export default function App() {
   return (
     <div>
-      <h1>Best selling</h1>
-
-      <Product />
-      <Product />
-      <Product />
+      <Booklist books={ favoriteBooks} />
     </div>
   );
 };
