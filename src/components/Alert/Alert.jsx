@@ -1,6 +1,6 @@
 import clsx from 'clsx';
-
-import '../../styles/Alert.css';
+import css from '../../styles/Alert.module.css';
+// import '../../styles/Alert.module.css';
 
 // const alertStyles = {
 //   margin: 8,
@@ -53,15 +53,45 @@ import '../../styles/Alert.css';
 //   return <p className={className.join(' ')}>{children}</p>;
 // };
 
-export const Alert = ({ variant, children, outlined, elevated }) => {
+// export const Alert = ({ variant, children, outlined, elevated }) => {
+//   return (
+//     <p
+//       className={clsx(
+//         'alert',
+//         variant,
+//         outlined && 'is-outlined',
+//         elevated && 'is-elevated'
+//       )}
+//     >
+//       {children}
+//     </p>
+//   );
+// };
+
+// більш декларативний запис буде таким що після тих класів які точно мають бути ми передаємо  обʼєкт налаштувань за умовою
+
+// export const Alert = ({ outlined, elevated, variant, children }) => {
+//   return (
+//     <p
+//       className={clsx('alert', variant, {
+//         'is-outlined': outlined,
+//         'is-elevated': elevated,
+//       })}
+//     >
+//       {children}
+//     </p>
+//   );
+// };
+
+// використовуючи composes
+
+export const Alert = ({ variant, outlined, elevated, children }) => {
   return (
     <p
-      className={clsx(
-        'alert',
-        variant,
-        outlined && 'is-outlined',
-        elevated && 'is-elevated'
-      )}
+      className={clsx(css[variant], {
+        [css.isOutlined]: outlined,
+        [css.isElevated]: elevated,
+      })}
     >
       {children}
     </p>
