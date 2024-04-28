@@ -6,6 +6,10 @@ import { Alert } from './Alert/Alert';
 // import { FollowButton } from './Button/FollowButton';
 import article from '../data/article.json';
 import books from '../data/books.json';
+import Profile from './Profile/Profile';
+import profile from '../data/profile.json';
+import FriendList from './FriendList/FriendList';
+import friends from '../data/friends.json';
 
 export default function App() {
   return (
@@ -20,6 +24,8 @@ export default function App() {
       <Alert variant="warning" outlined>
         Please update your profile contact information!
       </Alert>
+      <Profile {...profile} />
+      <FriendList friends={friends} />
     </div>
   );
 }
