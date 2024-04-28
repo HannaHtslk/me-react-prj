@@ -10,8 +10,22 @@ import Profile from './Profile/Profile';
 import profile from '../data/profile.json';
 import FriendList from './FriendList/FriendList';
 import friends from '../data/friends.json';
+import { useState } from 'react';
+import CustomButton from './CustomButton';
+import ClickCounter from './ClickCounter';
 
 export default function App() {
+  const [clicks, setClicks] = useState(0);
+
+  const handleClick = () => {
+    setClicks(clicks + 1);
+  };
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <div>
       <BooksList books={books} />
@@ -26,6 +40,19 @@ export default function App() {
       </Alert>
       <Profile {...profile} />
       <FriendList friends={friends} />
+
+      <button
+        onClick={() => {
+          alert('u clicked');
+        }}
+      >
+        Click me!
+      </button>
+
+      <button onClick={handleClick}>Counter: {clicks} </button>
+      <CustomButton message={'hey there'}>See greeting</CustomButton>
+      <button onClick={handleToggle}>{isOpen ? 'Hide' : 'Show'}</button>
+      {isOpen && <p>I am opened</p>}
     </div>
   );
 }
