@@ -4,7 +4,8 @@
 // import profile from '../data/profile.json';
 // import friends from '../data/friends.json';
 
-import ColorPicker from './ColorPicker/ColorPicker';
+// import ColorPicker from './ColorPicker/ColorPicker';
+import TodoList from './TodoList/TodoList';
 // import Counter from './Counter/Counter';
 
 // import CustomButton from './CustomButton';
@@ -31,7 +32,8 @@ export default function App() {
   return (
     <div>
       {/* <Counter /> */}
-      <ColorPicker />
+      {/* <ColorPicker /> */}
+      <TodoList />
 
       {/* <BooksList books={books} />
       <Article {...article} />
