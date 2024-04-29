@@ -5,14 +5,20 @@
 // import friends from '../data/friends.json';
 
 // import ColorPicker from './ColorPicker/ColorPicker';
-import TodoList from './TodoList/TodoList';
+// import TodoList from './TodoList/TodoList';
 // import Counter from './Counter/Counter';
 
 // import CustomButton from './CustomButton';
 // import ClickCounter from './ClickCounter';
-// import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import Modal from './Modal/Modal';
 
 export default function App() {
+  const [clicks, setClicks] = useState(0);
+
+  useEffect(() => {
+    console.log('You can see me only once');
+  }, []);
   // const [clicks, setClicks] = useState(0);
 
   // const handleClick = () => {
@@ -29,11 +35,52 @@ export default function App() {
   // const handleClick = () => {
   //   setClicks(clicks + 1);
   // };
+
+  // const [isOpen, setIsOpen] = useState(false);
+
+  const [first, setFirst] = useState(0);
+  const [second, setSecond] = useState(0);
+  useEffect(() => {
+    console.log('First updated: ', first);
+  }, [first]);
+  useEffect(() => {
+    console.log('Second updated: ', second);
+  }, [second]);
+
+  useEffect(() => {
+    console.log('First or second updated: ', first + second);
+  }, [first, second]);
   return (
     <div>
+      <button
+        onClick={() => {
+          setFirst(first + 1);
+        }}
+      >
+        First: {first}
+      </button>
+      <button
+        onClick={() => {
+          setSecond(second + 1);
+        }}
+      >
+        Second: {second}
+      </button>
+
+      {/* <button
+        onClick={() => {
+          setIsOpen(!isOpen);
+        }}
+      >
+        {isOpen ? 'Hide' : 'Show'}
+      </button>
+      {isOpen && <Modal />}
+      <button onClick={() => setClicks(clicks + 1)}>
+        You clicked {clicks} times
+      </button> */}
       {/* <Counter /> */}
       {/* <ColorPicker /> */}
-      <TodoList />
+      {/* <TodoList /> */}
 
       {/* <BooksList books={books} />
       <Article {...article} />
