@@ -4,7 +4,8 @@
 // import profile from '../data/profile.json';
 // import friends from '../data/friends.json';
 
-import Counter from './Counter/Counter';
+import ColorPicker from './ColorPicker/ColorPicker';
+// import Counter from './Counter/Counter';
 
 // import CustomButton from './CustomButton';
 // import ClickCounter from './ClickCounter';
@@ -29,7 +30,8 @@ export default function App() {
   // };
   return (
     <div>
-      <Counter />
+      {/* <Counter /> */}
+      <ColorPicker />
 
       {/* <BooksList books={books} />
       <Article {...article} />
